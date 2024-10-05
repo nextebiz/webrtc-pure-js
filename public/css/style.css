@@ -1,0 +1,43 @@
+body,
+html {
+    background-color: rgb(243, 243, 243);
+    padding: 0px !important;
+    margin: 0px !important;
+    height: 100%;
+}
+
+#loginForm {
+    height: 100%;
+}
+.notcallbtn {
+    background-color: rgb(220, 220, 220);
+}
+.callbtn {
+}
+.callbtn:hover {
+    background-color: rgb(220, 220, 220);
+}
+.callbtn svg {
+    fill: rgb(4, 213, 0);
+}
+
+.btn-menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#localVideo {
+    background-color: green;
+    position: absolute;
+    width: 120px;
+    height: auto;
+    right: 10px;
+    top: 10px;
+}
+#remoteVideo {
+    background-color: yellow;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

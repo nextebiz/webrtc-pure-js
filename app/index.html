@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Offcanvas Menu</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Content area -->
+    <div
+      id="loginForm"
+      style="display: flex"
+      class="justify-content-center align-items-center"
+    >
+      <div
+        class="d-flex align-items-center p-3 rounded rounded-3"
+        style="background-color: rgb(231, 231, 231)"
+      >
+        <div class="me-2">
+          <input id="userName" type="text" class="form-control" autofocus />
+        </div>
+        <div>
+          <button class="btn btn-info" id="btnLogin">start chat</button>
+        </div>
+      </div>
+    </div>
+    <div id="divVideos" style="display: none">
+      <video id="remoteVideo" autoplay playsinline></video>
+      <video
+        id="localVideo"
+        draggable="true"
+        autoplay
+        muted
+        playsinline
+      ></video>
+
+      <!-- Button to open offcanvas -->
+      <a
+        class="btn-menu"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasMenu"
+        aria-controls="offcanvasMenu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          style="width: 24px; height: 24px"
+        >
+          <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+          />
+        </svg>
+      </a>
+
+      <!-- Offcanvas menu -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul id="usersList" class="list-group">
+            <li class="list-group-item">Home</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS (required for Offcanvas) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/socket.io.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
